@@ -20,3 +20,15 @@
 .clickable {
     cursor: pointer;
 }
+
+.intro {
+    background: #fff;
+    box-shadow: none;
+    border: 2px dashed #ccc;
+
+    > p {
+        font-size: 1.1em;
+        line-height: 1.6em;
+        color: #555;
+    }
+}
