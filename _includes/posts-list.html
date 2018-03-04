@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-xs-12">
+        {% include pagination.html %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-unstyled">
+            {% for post in paginator.posts %}
+            <li>
+                <article class="well post-card">
+                    <h2 class="post-card__title">
+                        <a href="{{ post.url | prepend: site.baseurl }}">
+                            <strong>{{ post.title }}</strong>
+                        </a>
+                    </h2>
+
+                    <div class="post-card__meta">
+                        <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+                    </div>
+
+                    <div class="post-card__content">
+                        <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <hr />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><a href="{{ post.url | prepend: site.baseurl }}">Przeczytaj całość</a></li>
+                                    <li>
+                                        <span onclick="copyToClipboard(this)" class="color--secondary cursor-pointer">
+                                            <span class="postUrl hide">{{ post.url | prepend: site.url }}</span>
+                                            <i class="fas fa-link"></i>
+                                            <em class="hide confirm-message color--success">Copied!</em>
+                                        </span>
+                                    </li>
+                                    <li class="pull-right">
+                                        <i class="fas fa-comment color--secondary"></i>&nbsp;
+                                        <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{post.id}}"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        {% include pagination.html %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <p class="rss-subscribe">Zasubskrybuj
+            <a href="{{ " /feed.xml " | prepend: site.baseurl }}">
+                via RSS <i class="fas fa-rss-square color--secondary"></i>
+            </a>
+        </p>
+    </div>
+</div>

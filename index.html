@@ -1,0 +1,27 @@
+---
+layout: default-homepage
+---
+
+<div class="row home">
+    <div class="col-xs-12">
+
+        <section>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="page-heading">Najnowsze posty</h1>
+                </div>
+            </div>
+
+            {% include posts-list.html %}
+        </section>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <br/>
+        <br/>
+        {% include tagcloud.html %}
+    </div>
+</div>
+

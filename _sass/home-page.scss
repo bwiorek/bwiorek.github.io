@@ -1,0 +1,22 @@
+@import "variables";
+
+.home-page {
+    background: #f8f8f8;
+}
+
+.page-heading {
+    display: inline-block;
+    padding-bottom: 0.4em;
+    margin-bottom: 1.0em;
+    font-size: 1.6em;
+    border-bottom: 2px solid lighten(map-get($colors, primary), 30%);
+}
+
+.pagination-link-disabled {
+    background-color: #f6f6f6 !important;
+    color: #777 !important;
+}
+
+.clickable {
+    cursor: pointer;
+}

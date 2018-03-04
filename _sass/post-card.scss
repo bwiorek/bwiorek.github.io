@@ -1,0 +1,27 @@
+@import "variables";
+
+.post-card {
+    background: #fff;
+    border: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    
+    &:not(:last-of-type) {
+        margin-bottom: 2.4em;
+    }
+
+    &__title {
+        margin-top: 0;
+        font-size: 1.6em;
+    }
+
+    &__meta {
+        margin: 0.5em 0;
+        color: #888;
+    }
+
+    &__content {
+        font-size: 1.2em;
+        line-height: 1.55em;
+        color: #555;
+    }
+}

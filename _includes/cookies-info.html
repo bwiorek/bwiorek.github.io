@@ -1,0 +1,54 @@
+<div id="cookies-info" class="cookies-info hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="list-unstyled list-inline">
+                    <li>
+                        <img height="30px" src="/images/cookie.png" alt="Ciasteczka">
+                    </li>
+
+                    <li>
+                        <p>
+                            frontninja.pl korzysta z
+                            <a target="_blank" href="https://pl.wikipedia.org/wiki/HTTP_cookie">
+                                <strong>ciasteczek</strong>
+                            </a>
+                            (
+                            <em>eng. cookies</em>).
+                        </p>
+                    </li>
+
+                    <li>
+                        <button id="cookie-close-btn" class="btn btn-xs btn-success">
+                            <i class="fas fa-check"></i> OK, rozumiem!</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ site.path }}/js/cookies.js"></script>
+<script>
+    function handleCookies() {
+        var cookiesInfo = document.getElementById("cookies-info"),
+            cookieCloseBtn = document.getElementById("cookie-close-btn"),
+            cookieName = "cookies-confirmed",
+            cookie;
+
+        cookie = getCookie(cookieName);
+
+        if(!cookie) {
+            cookiesInfo.classList.remove("hidden");
+            cookieCloseBtn.addEventListener("click", onCloseBtnClick);
+        }
+
+        function onCloseBtnClick() {
+            setCookie(cookieName, true, 365);
+            cookieCloseBtn.removeEventListener("click", onCloseBtnClick);
+            cookiesInfo.classList.add("hidden");
+        }
+    }
+
+    handleCookies();
+</script>

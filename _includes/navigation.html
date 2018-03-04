@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logotype" href="{{ site.baseurl }}/">
+          <img height="55px" src="/images/logo__small--bg.png" alt="logotype">
+        </a>
+        <a class="navbar-brand hidden-xs" href="{{ site.baseurl }}/">
+          {{ site.title }}
+        </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            {% assign currentUrl = page.url | downcase | split: '/' %}
+            <li {% if page.url == "/" %} class='active' {% endif %}>
+              <a href="{{ site.baseurl }}/">Strona główna</a>
+            </li>
+            <li><a target="_blank" href="http://www.bartoszwiorek.pl">O mnie</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>

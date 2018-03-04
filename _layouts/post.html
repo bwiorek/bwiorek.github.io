@@ -1,0 +1,79 @@
+---
+layout: default
+comments: true
+---
+
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="breadcrumb">
+            <li><a href="/">Wszystkie posty</a></li>
+            <li>{{ page.title }}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <header class="post-header">
+                        <p class="post-meta">
+                            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                                {{ page.date | date: "%b %-d, %Y" }}
+                            </time>
+                            {% if page.author %} &nbsp;•&nbsp;
+                            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                <span itemprop="name">{{ page.author }}</span>
+                            </span>
+                            {% endif %}
+                        </p>
+                        <h1 class="post-title text-uppercase" itemprop="name headline">{{ page.title }}</h1>
+                    </header>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12" itemprop="articleBody">
+                    <div class="post-content">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <br />
+                    <br />
+                    <a href="/"><i class="fas fa-arrow-circle-left"></i> Wróć do listy postów</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <br />
+                    <br />
+                    <ul class="list-unstyled list-inline">
+                        {% for tag in page.tags %}
+                            {% capture tag_name %}{{ tag }}{% endcapture %}
+                            <li class="tag-link">
+                                <a href="/tag/{{ tag_name }}" title="{{ tag_name }}">
+                                    <code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>
+                                    &nbsp;
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </article>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        {% include comments.html %}
+    </div>
+</div>

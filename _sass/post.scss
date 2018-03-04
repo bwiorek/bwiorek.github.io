@@ -1,0 +1,40 @@
+.post {
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+    margin-bottom: 4.0em;
+
+    .post-title {
+        margin-top: 0;
+        font-weight: bold;
+        color: #999;
+    }
+
+    .post-content {
+        border-top: 2px solid #eee;
+        font-size: 1.35em;
+        line-height: 1.55em;
+        padding-top: 0.8em;
+
+        h2 {
+            font-weight: bold !important;
+            margin-bottom: 0.8em;
+        }
+
+        > p {
+            margin-bottom: 2.0em;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .tag-link {
+        > a {
+            text-decoration: none !important;
+        }
+    }
+}

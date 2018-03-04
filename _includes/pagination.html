@@ -1,0 +1,36 @@
+<!-- Pagination links -->
+<ul class="pagination">
+    {% if paginator.previous_page %}
+        <li>
+            <a href="{{ paginator.previous_page_path }}" class="previous clickable">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+        </li>
+    {% else %}
+        <li>
+            <span class="previous pagination-link-disabled">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+        </li>
+    {% endif %}
+
+    <li>
+        <span class="page_number pagination-link-disabled">
+            Strona: {{ paginator.page }} z {{ paginator.total_pages }}
+        </span>
+    </li>
+    
+    {% if paginator.next_page %}
+        <li>
+            <a href="{{ paginator.next_page_path }}" class="next clickable">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </li>
+    {% else %}
+        <li>
+            <span class="next pagination-link-disabled">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+        </li>
+    {% endif %}
+</ul>

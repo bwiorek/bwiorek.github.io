@@ -1,0 +1,68 @@
+@import "variables";
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #fff;
+}
+
+.page-heading {
+    margin-bottom: 0.5em;
+}
+
+.pagination {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.cursor {
+    &-pointer {
+        cursor: pointer;
+    }
+}
+
+.logotype--medium {
+    max-width: 200px !important;
+}
+
+.color {
+    &--success {
+        color: map-get($colors, success);
+    }
+
+    &--primary {
+        color: map-get($colors, primary);
+    }
+
+    &--secondary {
+        color: map-get($colors, secondary);
+    }
+}
+
+.breadcrumb {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.bg {
+    &--white {
+        background: #fff;
+    }
+}
+
+.cookies-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.85);
+    padding-top: 1.0em;
+    border-top: 1px solid #ccc;
+
+    ul {
+        margin-bottom: 0;
+
+        > li {
+            margin-bottom: 0.5em;
+        }
+    }
+}

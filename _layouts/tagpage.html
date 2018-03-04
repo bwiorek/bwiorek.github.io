@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="tag-page">
+    <h1>Tag: <strong>{{ page.tag }}</strong></h1>
+    <ul class="list-unstyled">
+        {% for post in site.tags[page.tag] %}
+        <li>
+            <article class="tag-excerpt">
+                <h2><a href="{{ post.url }}">{{ post.title }} ({{ post.date | date_to_string }})</a></h2>
+                <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
+            </article>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <br/>
+        <br/>
+        {% include tagcloud.html %}
+    </div>
+</div>

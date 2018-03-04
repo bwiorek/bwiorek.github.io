@@ -1,0 +1,25 @@
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if page.title %}
+      {{ page.title }} - {{ site.title }}
+    {% else %}
+      {{ site.title }} - blog o tematyce front-end
+    {% endif %}
+    
+  </title>
+  <meta name="author" content="bartoszwiorek@gmail.com">
+  <meta name="description" content="FrontNinja - blog o tematyce front-end">
+  
+  {% include favicon.html %}
+
+  <link rel="stylesheet" type="text/css" href="{{ site.path }}/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.path }}/css/fontawesome-all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="{{ site.path }}/js/bootstrap.min.js"></script>
+
+  {% if site.tags != "" %}
+    {% include collecttags.html %}
+  {% endif %}
+</head>
