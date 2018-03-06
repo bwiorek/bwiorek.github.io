@@ -77,9 +77,9 @@ render() {
 {% endhighlight %}
 
 #### **Klasa CaptchaHandler**
-Aby obsłużyć kod captchy dla każdej instancji komponentu, stworzę klasę `CaptchaHandler`, która w konstruktorze przyjmie `domId`(nasze id), `siteKey`(ten z procesu rejestracji captchy) i `callback`(funkcję, która wywoła się po pomyślnej walidacji z api) i przypisze je do wartości klasy.
+Aby obsłużyć kod captchy dla każdej instancji komponentu, stworzę klasę `CaptchaHandler`, która w konstruktorze przyjmie `domId`(nasze id), `siteKey`(ten z procesu rejestracji captchy) i `callback`(funkcję, która wywoła się po pomyślnej walidacji z api) i przypiszę je do wartości klasy.
 
-Podczas przypisywanie funkcji `callback`, warto sprawdzić czy rzeczywiście jest ona funkcją - jeśli nie jest, przypisać pustą funkcję. Stworzę także metodę `render`, którą za chwilę wypełnię kodem wywołującym api.
+Podczas przypisywania funkcji `callback`, warto sprawdzić czy rzeczywiście jest ona funkcją - jeśli nie jest, przypisać pustą funkcję. Stworzę także metodę `render`, którą za chwilę wypełnię kodem wywołującym api.
 
 {% highlight react %}
 class CaptchaHandler {
