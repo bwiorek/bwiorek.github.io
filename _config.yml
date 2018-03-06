@@ -11,7 +11,7 @@ email: bartoszwiorek@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog o tematyce front-end
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://frontninja.pl" # the base hostname & protocol for your site
+url: "http://www.frontninja.pl" # the base hostname & protocol for your site
 github_username:  bwiorek
 sass:
     style: :compressed
