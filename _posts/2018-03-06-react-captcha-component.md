@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Implementacja Google reCAPTCHA w aplikacji ReactJS"
-date:   2018-03-04 12:58:00 +0100
+date:   2018-03-06 22:00:00 +0100
 categories: react reactjs
 tags: react reactjs captcha recaptcha google js javascript component
 ---
