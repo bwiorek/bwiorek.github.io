@@ -166,6 +166,7 @@ Mam nadzieję, że powyższy post będzie przydatny, do zobaczenia w następnym 
 
 [**Zobacz cały kod**](https://github.com/bwiorek/react-recaptcha/blob/master/captcha-component.jsx){:target="_blank"}
 
+
 [captcha]:https://pl.wikipedia.org/wiki/CAPTCHA
 [GCaptcha]:https://www.google.com/recaptcha/admin#list
 [captcha-register]:https://i.imgur.com/Ppue8f4.jpg
