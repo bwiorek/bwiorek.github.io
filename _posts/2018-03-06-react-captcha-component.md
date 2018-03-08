@@ -164,7 +164,7 @@ W ten sposób napisaliśmy w pełni funkcjonalny komponent korzystający z Googl
 
 Mam nadzieję, że powyższy post będzie przydatny, do zobaczenia w następnym tekście :-).
 
-[**Zobacz cały kod**]({{ base.url }}/code-samples/captcha-component.jsx){:target="_blank"}
+[**Zobacz cały kod**](https://github.com/bwiorek/react-recaptcha/blob/master/captcha-component.jsx){:target="_blank"}
 
 [captcha]:https://pl.wikipedia.org/wiki/CAPTCHA
 [GCaptcha]:https://www.google.com/recaptcha/admin#list
