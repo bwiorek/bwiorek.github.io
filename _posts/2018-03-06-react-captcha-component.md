@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Implementacja Google reCAPTCHA w aplikacji ReactJS"
+description: W tym poście chciałbym pokazać w jaki sposób dodać captchę do aplikacji w Reactjs. Jedną z popularniejszym implementacji captchy jest reCaptcha stworzona przez Google. To z niej będę korzystał podczas pisania tego posta.
 date:   2018-03-06 22:00:00 +0100
 categories: react reactjs
 tags: react reactjs captcha recaptcha google js javascript component
