@@ -113,14 +113,17 @@ render() {
 }
 {% endhighlight %}
 
-Dzięki temu zabiegowi, jesteśmy pewni, że dalszy kod `render` będzie miał dostęp do api. `grecaptcha` posiada własną metodę `render`, do której przekazuję `elemId`, `siteKey` i `callback` tym samym kończąc tworzenie klasy `CaptchaHandler`. `grecaptcha` skomunikuje się z api i jeśli przesłane dane będą się zgadzały, wyświetli captchę w miejscu naszego elementu html.
+Dzięki temu zabiegowi, jesteśmy pewni, że dalszy kod `render` będzie miał dostęp do api. `grecaptcha` posiada własną metodę `render`, do której przekazuję `elemId`, `siteKey`, `callback` i `error-callback` - tym samym kończąc tworzenie klasy `CaptchaHandler`. `grecaptcha` skomunikuje się z api i jeśli przesłane dane będą się zgadzały, wyświetli captchę w miejscu naszego elementu html.
 
 {% highlight react %}
 grecaptcha.render(
     this.domId,
     {
         'sitekey': this.siteKey,
-        'callback': this.callback
+        'callback': () => {this.callback(true)},
+
+        /*zablokuj funkcjonalność po wygaśnięciu captchy.*/
+        'error-callback': () => {this.callback(false)}
     }
 );
 {% endhighlight %}
@@ -130,8 +133,8 @@ Po wykonaniu powyższych czynności powinniśmy móc pomyślnie wywołać *Captc
 {% highlight react %}
 import CaptchaComponent from '<ścieżka-do-komponentu>';
 ...
-const invokeWhenCaptchaResponseWithSuccess = () => {
-    alert("Sukces! Nie jesteś robotem!");
+const invokeOnCaptchaResponse = (isSuccess) => {
+    /*odblokuj/zablokuj funkcjonalność.*/
 };
 ...
 return (
@@ -140,7 +143,7 @@ return (
         <CaptchaComponent
             domId="google-captcha"
             siteKey="6LdncEoUAAAAAMfQGXFs5zW10FG1FG2paicPf4n9"
-            callback={invokeWhenCaptchaResponseWithSuccess}
+            callback={invokeOnCaptchaResponse}
         />
         ...
     </div>
